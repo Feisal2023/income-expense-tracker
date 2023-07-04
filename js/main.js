@@ -459,9 +459,9 @@ function incomeExpenseSummary() {
   const summaryArea = document.querySelector('.summary-area');
   summaryArea.innerHTML = `
     <div class="summaryContent">
-      <div class="income-summary">Income: $${totalIncome.toFixed(2)}</div>
-      <div class="expense-summary">Expense: $${totalExpense.toFixed(2)}</div>
-      <div class="netIncome-summary">Net Income: $${netIncome.toFixed(2)}</div>
+      <div class="income-summary">Income: Ksh ${totalIncome.toFixed(2)}</div>
+      <div class="expense-summary">Expense: Ksh ${totalExpense.toFixed(2)}</div>
+      <div class="netIncome-summary">Net Income: Ksh ${netIncome.toFixed(2)}</div>
     </div>
   `;
 }
