@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: rgba(243, 245, 238, 0.562);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.container-header h2 {
+  font-size: 30px;
+  color: #333;
+  word-spacing: 1px;
+  width: 600px;
+  text-align: center;
+}
+.container-header h2 span,
+.container-header h2 .fa-chart-bar {
+  color: #f70909;
+}
+
+.container-header h2 .fa-chart-bar {
+  padding-right: 10px;
+}
+
+.container1,
+.container2 {
+  max-width: 70%;
+  position: relative;
+  background: #ffffff;
+  border-radius: 5px;
+  border:  1px solid #fff;
+  margin: 40px auto;
+  padding: 20px 0px 40px 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.container1-heading h2,
+.container2-heading h2 {
+  color: #f70909;
+}
+.container1 hr,
+.container2 hr {
+  width: 90%;
+  margin-top: 20px;
+}
+#source-control {
+  margin-top: 30px;
+}
+
+ label{
+display: block;
+margin-bottom: 5px;
+color: #333;
+font-weight: 600;
+}
+#source-control  input {
+  width: 90%;
+  padding: 10px 15px;
+}
+.form-control {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.form-control .status select {
+  width: 100%;
+  padding: 10px 15px;
+}
+.form-control  input {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.input-message small {
+  display: block;
+  color: red;
+  visibility: hidden;
+}
+.input-message.error input {
+  border:  1px solid #ec5a36;
+}
+.input-message.success input {
+  border:  1px solid green;
+}
+.btn {
+  padding: 10px 15px;
+  background: #f70909;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+
+
+  .section-form-output,
+  .expense-section-form-output  {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  
+}
+.added-income-details {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px 15px;
+  color: #fff;
+
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table thead  {
+  border-bottom: 1px solid #333;
+
+}
+
+ tbody tr td {
+  text-align: center;
+} 
+
+.fa-trash:hover {
+  color: #f70909;
+  cursor: pointer;
+}
+.fa-edit:hover {
+  color: blue;
+  cursor: pointer;
+}
+ #expense-overlay,
+#income-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+#expense-overlay form,
+#income-overlay form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#expense-overlay h3,
+#income-overlay h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#expense-overlay .form-control,
+#income-overlay .form-control {
+  margin-bottom: 20px;
+}
+
+#expense-overlay .form-buttons,
+#income-overlay .form-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px 15px;
+}
+
+#expense-overlay.form-buttons button,
+#income-overlay.form-buttons button {
+  margin: 0 10px;
+}
+.summaryContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
+  background: #ccc;
+  color: #333;
+  
+}
+@media screen and (max-width: 600px) {
+  /* Styles for screens with a maximum width of 600px or less */
+
+  .container {
+    max-width: 100%;
+    margin: 20px;
+  }
+
+  .container-header h2 {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .container1 {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .container1-heading h2 {
+    font-size: 24px;
+  }
+
+  .form-control {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .form-control .status select {
+    width: 100%;
+  }
+
+  .input-message small {
+    font-size: 12px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .section-form-output,
+  .expense-section-form-output {
+    overflow-x: auto;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  /* Responsive table layout for small screens */
+  table thead {
+    display: none;
+  }
+
+  table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+  }
+
+  table tbody td {
+    flex-basis: 100%;
+    text-align: left;
+    padding: 5px;
+  }
+
+  /* Add some space between rows for better readability */
+  table tbody tr:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+}
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Income Expense Tracker</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="container-header">
+      <h2><i class="fas fa-chart-bar"></i>  My <span>income</span> and <span>Expense</span>Tracker</h2>
+    </div>
+  </div>
+  <!-- income section -->
+    <section class="container1">
+     <div class="container1-heading">
+      <h2>My Income</h2>
+      <div id="income-updated-message"></div>
+     </div>
+     <hr>
+     <form  class="incomeForm" id="incomeForm">
+      <div id="source-control" class=" input-message">
+        <label for="source">Source</label>
+        <input type="text" id="source" class="source" placeholder="Enter Your source of Income">
+        <small>Error Message</small>
+      </div>
+      <div class="form-control status-amount">
+        <div class="status">
+          <label for="Amount">Status</label>
+          <select  id="status">
+            <option value="Received">Received</option>
+            <option value="Not Received">Not Received</option>
+          </select>
+        </div>
+        <div class="amount input-message">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" class="amount">
+          <small>Error Message</small>
+        </div>
+      </div>
+    <button type="submit" id="add-income-btn" class="btn">Add New Income</button>
+     </form>
+     <div class="section-form-output">
+      <table>
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>Delete</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+      <tbody></tbody>
+      </table>
+    </div>
+       <!-- Overlay Income Form Editing  -->
+<div id="income-overlay">
+  <form id="edit-income-form">
+    <h3>Edit Income</h3>
+    <div class="form-control">
+      <label for="edit-source">Source</label>
+      <input type="text" id="edit-source" class="edit-source" placeholder="Enter Your source of Income">
+    </div>
+    <div class="form-control">
+      <label for="edit-status">Status</label>
+      <select id="edit-status">
+        <option value="Received">Received</option>
+        <option value="Not Received">Not Received</option>
+      </select>
+    </div>
+    <div class="form-control">
+      <label for="edit-amount">Amount</label>
+      <input type="number" id="edit-amount" class="edit-amount">
+    </div>
+    <div class="form-buttons">
+      <button type="submit" class="update-btn btn">Update</button>
+      <button type="button" class="cancel-btn btn" id="edit-income-cancel">Cancel</button>
+    </div>
+  </form>
+</div>
+  </section>
+<!-- expense section -->
+<section class="container2">
+  <div class="container2-heading">
+   <h2>My Expense</h2>
+   <div id="expense-updated-message"></div>
+  </div>
+  <form  class="expenseForm" id="expenseForm">
+   <div class="form-control category-status">
+    <div class="category input-message ">
+      <label for="category">Category</label>
+      <input type="text" id="category" class="category" placeholder="Enter Your expense category">
+      <small>Error Message</small>
+    </div>
+   <div class="status">
+      <label for="Amount">Status</label>
+      <select  id="expenseStatus">
+        <option value="Paid">Paid</option>
+        <option value="Not Paid">Not Paid</option>
+      </select>
+    </div>
+   </div>
+   <div class="form-control description-amount">
+    <div class="description input-message ">
+      <label for="description">Description</label>
+      <input type="text" id="description" class="description" placeholder="Enter Your expense description">
+      <small>Error Message</small>
+    </div>
+     <div class="amount input-message ">
+       <label for="amount">Amount</label>
+       <input type="number" id="expenseAmount" class="expenseAmount">
+       <small>Error Message</small>
+     </div>
+   </div>
+ <button type="submit" id="add-expense-btn" class="btn">Add New Expense</button>
+  </form>
+  <div class="expense-section-form-output">
+   <table>
+     <thead>
+      <tr>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Status</th>
+       <th>Amount</th>
+       <th>Delete</th>
+       <th>Edit</th>
+      </tr>
+       </thead>
+      <tbody></tbody>
+   </table>
+  </div>
+   <!-- Overlay Expense Form Editing  -->
+ <div id="expense-overlay">
+  <form id="edit-expense-form">
+    <h3>Edit Expense</h3>
+    <div class="form-control">
+      <label for="edit-category">Category</label>
+      <input type="text" id="edit-category" class="edit-category" placeholder="Enter Your expense category">
+    </div>
+    <div class="form-control">
+      <label for="edit-expenseStatus">Status</label>
+      <select id="edit-expenseStatus">
+        <option value="Paid">Paid</option>
+        <option value="Not Paid">Not Paid</option>
+      </select>
+    </div>
+    <div class="form-control">
+      <label for="edit-description">Description</label>
+      <input type="text" id="edit-description" class="edit-description" placeholder="Enter Your expense description">
+    </div>
+    <div class="form-control">
+      <label for="edit-expenseAmount">Amount</label>
+      <input type="number" id="edit-expenseAmount" class="edit-expenseAmount">
+    </div>
+    <div class="form-buttons">
+      <button type="submit" class="update-btn btn">Update</button>
+      <button type="button" class="cancel-btn btn" id="edit-expense-cancel">Cancel</button>
+    </div>
+  </form>
+</div>
+</section>
+
+  <!-- generate income section -->
+<section class="container1">
+  <button type="submit" class="generate-summary-btn btn">Generate Summary</button> 
+  <div class="summary-area"></div>
+</section>
+<script src="js/main.js"></script>
+</body>
+</html>
