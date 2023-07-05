@@ -216,12 +216,14 @@ table thead  {
     width: 100%;
   }
 
-  .container1 {
+  .container1, 
+  .container2 {
     max-width: 90%;
     padding: 10px;
   }
 
-  .container1-heading h2 {
+  .container1-heading h2 
+  .container2-heading h2 {
     font-size: 24px;
   }
 
